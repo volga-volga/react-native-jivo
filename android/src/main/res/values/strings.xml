@@ -1,0 +1,4 @@
+<resources>
+    <string name="chat_title">chat_title</string>
+    <color name="colorAccent">#00ffff</color>
+</resources>

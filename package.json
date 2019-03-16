@@ -1,0 +1,25 @@
+{
+  "name": "react-native-jivo",
+  "version": "0.0.1",
+  "description": "React Native jivosite implementation",
+  "keywords": [
+    "react-native",
+    "jivochat",
+    "jivosite",
+    "chat",
+    "volga-volga",
+    "vvdev"
+  ],
+  "author": "",
+  "dependencies": {
+    "color2array": "^1.0.2"
+  },
+  "rnpm": {
+    "android": {
+      "sourceDir": "./android"
+    },
+    "ios": {
+      "sourceDir": "./ios"
+    }
+  }
+}
