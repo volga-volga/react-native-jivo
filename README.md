@@ -46,5 +46,4 @@ JivoChat.emitter.removeListener(JivoChat.Events.client_info, listener);
 ```
 
 # TODO
-- [ ] npm publish
 - [ ] example
