@@ -42,12 +42,14 @@ class JivoChat {
   static emitter = jivoEmitter;
 
   static openChat(title = 'support', titleColor = '#ffffff', toolbarColor = '#000000') {
+    const parsedTitleColor = parseHexColor(titleColor);
+    const parsedToolbarColor = parseHexColor(toolbarColor);
     if (Platform.OS === 'ios') {
       jivochat.openChat({
-        title, titleColor, toolbarColor
+        title, titleColor: '#'+parsedTitleColor.toString(16), toolbarColor: '#'+parsedToolbarColor.toString(16)
       });
     } else {
-      jivochat.openChat(title, parseHexColor(titleColor), parseHexColor(toolbarColor));
+      jivochat.openChat(title, parsedTitleColor, parsedToolbarColor);
     }
   }
 
