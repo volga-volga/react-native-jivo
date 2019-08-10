@@ -8,18 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		13BE3DEE1AC21097009241FE /* jivochat.m in Sources */ = {isa = PBXBuildFile; fileRef = 13BE3DED1AC21097009241FE /* jivochat.m */; };
-		D69E7E16223DA68B00A8368F /* JivoUI.framework in Sources */ = {isa = PBXBuildFile; fileRef = D69E7E15223DA67D00A8368F /* JivoUI.framework */; };
+		D68009F421C7D4690079887D /* JivoSdk.m in Sources */ = {isa = PBXBuildFile; fileRef = D68009F121C7D4690079887D /* JivoSdk.m */; };
+		D68009F521C7D4690079887D /* ChatController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68009F221C7D4690079887D /* ChatController.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		D69E7E14223DA67D00A8368F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D69E7E10223DA67D00A8368F /* JivoUI.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D6DA497621B3C45300A6154C;
-			remoteInfo = JivoUI;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		58B511D91A9E6C8500147676 /* CopyFiles */ = {
@@ -37,7 +28,11 @@
 		134814201AA4EA6300B7C361 /* libjivochat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libjivochat.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		13BE3DEC1AC21097009241FE /* jivochat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jivochat.h; sourceTree = "<group>"; };
 		13BE3DED1AC21097009241FE /* jivochat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jivochat.m; sourceTree = "<group>"; };
-		D69E7E10223DA67D00A8368F /* JivoUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JivoUI.xcodeproj; path = Libraries/JivoUI.xcodeproj; sourceTree = "<group>"; };
+		D68009F021C7D4690079887D /* ChatController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatController.h; sourceTree = "<group>"; };
+		D68009F121C7D4690079887D /* JivoSdk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JivoSdk.m; sourceTree = "<group>"; };
+		D68009F221C7D4690079887D /* ChatController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatController.m; sourceTree = "<group>"; };
+		D68009F321C7D4690079887D /* JivoSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JivoSdk.h; sourceTree = "<group>"; };
+		D68009F621C7D5A80079887D /* Observer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Observer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +57,11 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				D69E7E0F223DA65B00A8368F /* Libraries */,
+				D68009F621C7D5A80079887D /* Observer.h */,
+				D68009F021C7D4690079887D /* ChatController.h */,
+				D68009F221C7D4690079887D /* ChatController.m */,
+				D68009F321C7D4690079887D /* JivoSdk.h */,
+				D68009F121C7D4690079887D /* JivoSdk.m */,
 				13BE3DEC1AC21097009241FE /* jivochat.h */,
 				13BE3DED1AC21097009241FE /* jivochat.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
@@ -72,22 +71,6 @@
 			sourceTree = "<group>";
 			tabWidth = 2;
 			usesTabs = 0;
-		};
-		D69E7E0F223DA65B00A8368F /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-				D69E7E10223DA67D00A8368F /* JivoUI.xcodeproj */,
-			);
-			name = Libraries;
-			sourceTree = "<group>";
-		};
-		D69E7E11223DA67D00A8368F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D69E7E15223DA67D00A8368F /* JivoUI.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
 		};
 		D6DA496021B3BDAF00A6154C /* Frameworks */ = {
 			isa = PBXGroup;
@@ -141,12 +124,6 @@
 			mainGroup = 58B511D21A9E6C8500147676;
 			productRefGroup = 58B511D21A9E6C8500147676;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = D69E7E11223DA67D00A8368F /* Products */;
-					ProjectRef = D69E7E10223DA67D00A8368F /* JivoUI.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				58B511DA1A9E6C8500147676 /* jivochat */,
@@ -154,23 +131,14 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		D69E7E15223DA67D00A8368F /* JivoUI.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = JivoUI.framework;
-			remoteRef = D69E7E14223DA67D00A8368F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D68009F521C7D4690079887D /* ChatController.m in Sources */,
+				D68009F421C7D4690079887D /* JivoSdk.m in Sources */,
 				13BE3DEE1AC21097009241FE /* jivochat.m in Sources */,
-				D69E7E16223DA68B00A8368F /* JivoUI.framework in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

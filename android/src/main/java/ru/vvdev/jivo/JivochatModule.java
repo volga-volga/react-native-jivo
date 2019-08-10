@@ -81,7 +81,6 @@ public class JivochatModule extends ReactContextBaseJavaModule implements Observ
     }
 
     private static void emitDeviceEvent(String eventName, @Nullable WritableMap eventData) {
-        Log.e("YUI", eventName);
         reactContext.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class).emit(eventName, eventData);
     }
 

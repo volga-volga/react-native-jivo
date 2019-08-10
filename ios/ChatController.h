@@ -3,8 +3,11 @@
 #import "Observer.h"
 
 @interface ChatController : UIViewController<JivoDelegate>
+
 @property (strong, nonatomic) NSDictionary *options;
-- (void) callApiMehod: (NSString*) method data: (NSString*)data;
-- (void) initFromRN: (NSDictionary *)options observer:(id<Observer>) observer;
+@property (nonatomic) id<Observer> observer;
+-(void) initFromRN: (NSDictionary *)options withObserver: (id<Observer>) obs;
 - (UIColor *)colorFromHexString:(NSString *)hexString;
+- (void)callApiMethod: (NSString*) name withData: (NSString*) data;
+
 @end

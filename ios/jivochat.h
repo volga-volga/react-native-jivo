@@ -14,12 +14,9 @@
 #else
 #import “React/RCTEventEmitter.h” // Required when used as a Pod in a Swift project
 #endif
-
-#import "Libraries/JivoUI/Observer.h"
-#import "Libraries/JivoUI/ChatController.h"
+#import "ChatController.h"
 
 @interface jivochat : RCTEventEmitter <RCTBridgeModule, Observer>
-@property (nonatomic) ChatController* controller;
-- (void) onEvent: (NSString*) event data: (NSString*) data;
-- (void) emitMessage: (NSString*) event :(NSDictionary*) params;
+@property (strong, nonatomic) ChatController* controller;
+- (void)handleEvent: (NSString*) event withData: (NSString*) data;
 @end

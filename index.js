@@ -54,10 +54,12 @@ class JivoChat {
   }
 
   static callApiMethod(method = '', data = '') {
-    if (Platform.OS === 'ios') {
-      jivochat.callApiMethod({ method, data });
-    } else {
-      jivochat.callApiMethod(method, data);
+    if (method) {
+      if (Platform.OS === 'ios') {
+        jivochat.callApiMethod({ method, data });
+      } else {
+        jivochat.callApiMethod(method, data);
+      }
     }
   }
 }
