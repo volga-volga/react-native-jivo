@@ -32,7 +32,7 @@ RCT_EXPORT_METHOD(callApiMethod:(NSDictionary *) options) {
   if (self.controller) {
     NSString* method = [options valueForKey:@"method"];
     NSString* data = [options valueForKey:@"data"];
-    [self.controller callApiMehod: method data:data];
+    [self.controller callApiMethod: method withData:data];
   }
 }
 
