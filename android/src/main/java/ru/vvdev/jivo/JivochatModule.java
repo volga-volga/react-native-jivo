@@ -2,7 +2,7 @@ package ru.vvdev.jivo;
 
 import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;

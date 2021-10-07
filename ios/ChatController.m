@@ -33,6 +33,7 @@
   jivoSdk = [[JivoSdk alloc] initWith:JivoView :langKey];
   self.title = self.options[@"title"];
   [self.navigationController.navigationBar setBarTintColor:[self colorFromHexString:self.options[@"toolbarColor"]]];
+  [self.navigationController.navigationBar setBackgroundColor:[self colorFromHexString:self.options[@"toolbarColor"]]];
   [self.navigationController.navigationBar setTintColor:[self colorFromHexString:self.options[@"titleColor"]]];
   [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[self colorFromHexString:self.options[@"titleColor"]]}];
   self.navigationController.navigationBar.topItem.title = @"";
