@@ -29,6 +29,7 @@
   [super viewDidLoad];
   langKey = [[NSBundle mainBundle] localizedStringForKey:(@"LangKey") value:@"ru" table:nil];
   JivoView = [[UIWebView alloc] initWithFrame:self.view.frame];
+  JivoView.backgroundColor = UIColor.whiteColor;
   [self.view addSubview:JivoView];
   jivoSdk = [[JivoSdk alloc] initWith:JivoView :langKey];
   self.title = self.options[@"title"];
@@ -46,14 +47,16 @@
   [super viewWillAppear:animated];
   [jivoSdk start];
   self.navigationController.navigationItem.backBarButtonItem.title = @" ";
+  self.navigationController.navigationBar.shadowImage = nil;
   self.navigationController.navigationBar.layer.shadowColor = [[UIColor blackColor] CGColor];
-  self.navigationController.navigationBar.layer.shadowOffset = CGSizeMake(2.0f, 2.0f);
-  self.navigationController.navigationBar.layer.shadowRadius = 4.0f;
-  self.navigationController.navigationBar.layer.shadowOpacity = 0.3f;
+  self.navigationController.navigationBar.layer.shadowOffset = CGSizeMake(0.0f, 1.0f);
+  self.navigationController.navigationBar.layer.shadowRadius = 1.0f;
+  self.navigationController.navigationBar.layer.shadowOpacity = 0.1f;
   [super viewWillAppear:animated];
-  self.navigationController.navigationBar.hidden = NO;
 }
-
+-(void)viewDidAppear:(BOOL)animated {
+    self.navigationController.navigationBar.hidden = NO;
+}
 - (void)viewWillDisappear:(BOOL)animated {
   [super viewWillDisappear:animated];
   self.navigationController.navigationBar.hidden = YES;
